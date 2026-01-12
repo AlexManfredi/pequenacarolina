@@ -28,12 +28,6 @@
             border-bottom: 4px solid var(--cor-secundaria);
         }
 
-        header h1 {
-            margin: 5px 0;
-            color: var(--cor-primaria);
-            letter-spacing: 1px;
-        }
-
         nav {
             display: flex;
             justify-content: center;
@@ -67,7 +61,7 @@
             margin: 0 auto 40px;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
@@ -79,19 +73,15 @@
             padding-bottom: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: 0.3s;
-            position: relative;
         }
 
         .produto-card:hover { transform: translateY(-8px); }
 
         .produto-img {
             width: 100%;
-            height: 300px; /* Definir altura fixa ajuda a manter o alinhamento */
-            object-fit: cover; 
-            display: block;
+            height: 350px;
+            object-fit: cover;
         }
-
-        .info-produto { padding: 15px; }
 
         .preco {
             font-size: 1.3em;
@@ -101,16 +91,15 @@
         }
 
         .btn-comprar {
+            display: inline-block;
+            text-decoration: none;
             border: none;
             padding: 12px 25px;
             border-radius: 50px;
-            cursor: pointer;
             font-weight: bold;
             color: white;
             background-color: var(--cor-secundaria);
             transition: 0.3s;
-            text-decoration: none;
-            display: inline-block;
         }
 
         .whatsapp-float {
@@ -120,15 +109,14 @@
             bottom: 20px;
             right: 20px;
             background-color: #25d366;
-            color: #FFF;
+            color: white;
             border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
             text-decoration: none;
         }
 
@@ -138,24 +126,18 @@
             background: var(--cor-primaria);
             color: white;
         }
-
-        @media (max-width: 600px) {
-            nav { gap: 10px; font-size: 12px; }
-        }
     </style>
 </head>
 <body>
 
 <header>
     <div style="margin-bottom: 15px;">
-        <a href="https://www.instagram.com/loja_pequenacarolina/" target="_blank" style="text-decoration: none; color: #E1306C; font-weight: bold; display: inline-flex; align-items: center; gap: 8px;">
-            <i class="fa-brands fa-instagram"></i>
-            <span style="font-size: 13px; color: #555;">@loja_pequenacarolina</span>
+        <a href="https://www.instagram.com/loja_pequenacarolina/" target="_blank" style="text-decoration: none; color: #E1306C; font-weight: bold;">
+            <i class="fa-brands fa-instagram"></i> @loja_pequenacarolina
         </a>
     </div>
-    <img src="logo.jpg" alt="Logo" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
+    <img src="logo.jpg" alt="Logo" style="width: 130px; height: 130px; border-radius: 50%;">
     <h1>Pequena Carolina</h1>
-    <p>Moda infantil com charme e conforto</p>
 </header>
 
 <nav>
@@ -168,13 +150,11 @@
     <h2 class="secao-titulo" style="color: #f03e3e;">🔥 Ofertas Imperdíveis 🔥</h2>
     <div class="container">
         <div class="produto-card">
-            <div style="background: #f03e3e; color: white; position: absolute; padding: 5px 15px; font-weight: bold; border-radius: 0 0 12px 0;">-30% OFF</div>
             <img src="https://via.placeholder.com/300x400" class="produto-img">
-            <div class="info-produto">
+            <div style="padding:15px;">
                 <h3>Conjunto Verão Style</h3>
-                <p style="text-decoration: line-through; color: #999; margin:0;">R$ 110,00</p>
                 <p class="preco" style="color: #f03e3e;">R$ 77,00</p>
-                <a href="https://wa.me/559492695495" class="btn-comprar" style="background-color: #f03e3e;">Aproveitar</a>
+                <a href="https://wa.me/559492695495" class="btn-comprar" style="background-color:#f03e3e;">Comprar</a>
             </div>
         </div>
     </div>
@@ -183,22 +163,22 @@
 <h2 class="secao-titulo" id="meninas">Coleção para Meninas 🌸</h2>
 <div class="container">
     <div class="produto-card">
-        <img src="Vestido azul.jpeg" class="produto-img" alt="Vestido">
-        <div class="info-produto">
+        <img src="vestido-azul.jpg" class="produto-img" alt="Vestido Submarino">
+        <div style="padding:15px;">
             <h3>Vestido Submarino</h3>
             <p class="preco">R$ 390,00</p>
             <a href="produto-vestido-azul.html" class="btn-comprar">Ver Detalhes</a>
         </div>
     </div>
-    </div>
+</div>
 
 <hr style="border: 0; height: 1px; background: #eee; margin: 40px 0;">
 
 <h2 class="secao-titulo" id="meninos">Coleção para Meninos 🚗</h2>
 <div class="container">
     <div class="produto-card">
-        <img src="Conjunto T-shirt e Berrmuda...jpeg" class="produto-img" alt="Conjunto Menino">
-        <div class="info-produto">
+        <img src="conjunto-menino.jpg" class="produto-img" alt="Conjunto Menino">
+        <div style="padding:15px;">
             <h3>Conjunto Submarino Bege</h3>
             <p class="preco">R$ 280,00</p>
             <a href="produto-menino.html" class="btn-comprar">Ver Detalhes</a>
@@ -215,5 +195,4 @@
 </a>
 
 </body>
-
 </html>
