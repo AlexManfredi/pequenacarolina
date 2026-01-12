@@ -1,1 +1,218 @@
-# pequenacarolina
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequena Carolina | Moda Infantil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --cor-primaria: #7d464b;
+            --cor-secundaria: #9b86bd;
+            --cor-fundo: #fdfbf7;
+            --cor-texto: #4a3c3c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--cor-secundaria);
+        }
+
+        header h1 {
+            margin: 5px 0;
+            color: var(--cor-primaria);
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 15px;
+            gap: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--cor-secundaria); }
+
+        .secao-titulo {
+            text-align: center;
+            margin: 40px 0 20px;
+            font-size: 1.6rem;
+            color: var(--cor-primaria);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .produto-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .produto-card:hover { transform: translateY(-8px); }
+
+        .produto-img {
+            width: 100%;
+            height: 300px; /* Definir altura fixa ajuda a manter o alinhamento */
+            object-fit: cover; 
+            display: block;
+        }
+
+        .info-produto { padding: 15px; }
+
+        .preco {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--cor-primaria);
+            margin: 10px 0;
+        }
+
+        .btn-comprar {
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            background-color: var(--cor-secundaria);
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--cor-primaria);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav { gap: 10px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="margin-bottom: 15px;">
+        <a href="https://www.instagram.com/loja_pequenacarolina/" target="_blank" style="text-decoration: none; color: #E1306C; font-weight: bold; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fa-brands fa-instagram"></i>
+            <span style="font-size: 13px; color: #555;">@loja_pequenacarolina</span>
+        </a>
+    </div>
+    <img src="logo.jpg" alt="Logo" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
+    <h1>Pequena Carolina</h1>
+    <p>Moda infantil com charme e conforto</p>
+</header>
+
+<nav>
+    <a href="#promocao">Promoções</a>
+    <a href="#meninas">Meninas</a>
+    <a href="#meninos">Meninos</a>
+</nav>
+
+<div id="promocao" style="background-color: #fff9db; padding: 20px 0;">
+    <h2 class="secao-titulo" style="color: #f03e3e;">🔥 Ofertas Imperdíveis 🔥</h2>
+    <div class="container">
+        <div class="produto-card">
+            <div style="background: #f03e3e; color: white; position: absolute; padding: 5px 15px; font-weight: bold; border-radius: 0 0 12px 0;">-30% OFF</div>
+            <img src="https://via.placeholder.com/300x400" class="produto-img">
+            <div class="info-produto">
+                <h3>Conjunto Verão Style</h3>
+                <p style="text-decoration: line-through; color: #999; margin:0;">R$ 110,00</p>
+                <p class="preco" style="color: #f03e3e;">R$ 77,00</p>
+                <a href="https://wa.me/559492695495" class="btn-comprar" style="background-color: #f03e3e;">Aproveitar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="secao-titulo" id="meninas">Coleção para Meninas 🌸</h2>
+<div class="container">
+    <div class="produto-card">
+        <img src="Vestido Com Alças Listradas...jpeg" class="produto-img" alt="Vestido">
+        <div class="info-produto">
+            <h3>Vestido Submarino</h3>
+            <p class="preco">R$ 390,00</p>
+            <a href="produto-vestido-azul.html" class="btn-comprar">Ver Detalhes</a>
+        </div>
+    </div>
+    </div>
+
+<hr style="border: 0; height: 1px; background: #eee; margin: 40px 0;">
+
+<h2 class="secao-titulo" id="meninos">Coleção para Meninos 🚗</h2>
+<div class="container">
+    <div class="produto-card">
+        <img src="Conjunto T-shirt e Berrmuda...jpeg" class="produto-img" alt="Conjunto Menino">
+        <div class="info-produto">
+            <h3>Conjunto Submarino Bege</h3>
+            <p class="preco">R$ 280,00</p>
+            <a href="produto-menino.html" class="btn-comprar">Ver Detalhes</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Pequena Carolina - Loja Online Infantil</p>
+</footer>
+
+<a href="https://wa.me/559492695495" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
